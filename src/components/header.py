@@ -19,3 +19,23 @@ def header_home():
     
                 """
                 ,unsafe_allow_html=True)
+
+def header_dashboard():
+    logo_path = Path(__file__).resolve().parents[2] / "assets" / "logo.png"
+
+    with open(logo_path, "rb") as image:
+        logo_base64 = base64.b64encode(image.read()).decode("utf-8")
+
+    logo_url = f"data:image/png;base64,{logo_base64}"
+    st.markdown(
+        f"""
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin:20px 0;">
+            <img src="{logo_url}" style="height:64px; width:64px; object-fit:contain;" />
+            <div style="font-family:'Climate Crisis',sans-serif; color:#5865F2; font-size:2rem; line-height:1.1; white-space:nowrap;">
+                CLASS<br/>PULSE
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
