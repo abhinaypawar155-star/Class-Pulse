@@ -107,6 +107,3 @@ streamlit run app.py
 
 Camera and microphone access are required for face and voice workflows. The subject-sharing link currently uses `http://localhost:8501`; update the app URL in `src/components/dialog_share_subject.py` before sharing links from a deployed instance.
 
-## License
-
-No open-source license is currently specified. Contact the repository owner for permission before reusing or distributing this project.
